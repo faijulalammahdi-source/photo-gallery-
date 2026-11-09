@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #fff;
+  font-family:arial, Helvetica, sans-serif;
+}
+
+
+/*common css end */
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .row {
+  gap: 20px;
+}
+.card{
+  width: calc(20% - 20px);
+  border: none;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+} 
+
+.popup {
+  position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.356);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.45s ease;
+}
+.popup .popupimg{
+  max-width: 800px;
+  transform: scale(0.5);
+
+}
+.popup .popupimg img {
+  width: 100%;
+  height: 100%;
+}
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.active .popupImg {
+  transform: scale(1);
+  transition: all 0.35s ease;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+}
+
+.leftArrow,
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.leftArrow {
+  left: 30%;
+}
+
+.rightArrow {
+  right: 30%;
+}
